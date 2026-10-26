@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum DOM dan Event</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Latihan 1 & 2 -->
+    <h1 id="judul">Latihan DOM</h1>
+    <p id="pesan">Belum ada tindakan.</p>
+    <button id="tombolAksi" type="button">Klik Saya</button>
+
+    <hr style="margin: 20px 0" />
+
+    <!-- Latihan 3 -->
+    <h3>Mengubah Gaya CSS</h3>
+    <p id="teksGaya">
+      Paragraf ini akan berubah gaya dan kelasnya saat tombol di bawah diklik.
+    </p>
+    <button id="tombolGaya" type="button">Ubah Gaya</button>
+
+    <hr style="margin: 20px 0" />
+
+    <!-- Latihan 4 -->
+    <h3>Penghitung Karakter</h3>
+    <label for="namaInput">Nama:</label><br />
+    <input type="text" id="namaInput" maxlength="40" />
+    <p>Jumlah karakter: <span id="jumlahKarakter">0</span></p>
+
+    <hr style="margin: 20px 0" />
+
+    <!-- Latihan 5 -->
+    <h3>Validasi Form Pendaftaran</h3>
+    <form id="formPendaftaran" novalidate>
+      <label for="nama">Nama lengkap</label><br />
+      <input id="nama" name="nama" type="text" /><br /><br />
+
+      <label for="email">Email</label><br />
+      <input id="email" name="email" type="email" /><br /><br />
+
+      <label for="usia">Usia (17–100)</label><br />
+      <input
+        id="usia"
+        name="usia"
+        type="number"
+        min="17"
+        max="100"
+      /><br /><br />
+
+      <button type="submit">Daftar</button>
+    </form>
+    <p id="pesanForm" aria-live="polite" style="font-weight: bold"></p>
+
+    <hr style="margin: 20px 0" />
+
+    <!-- Latihan 6 & Eksperimen Mandiri 1 -->
+    <section>
+      <h3>Daftar Tugas (To-do List)</h3>
+      <label for="inputTugas">Tugas baru</label><br />
+      <input id="inputTugas" type="text" />
+      <button id="tambahTugas" type="button">Tambah</button>
+      <p id="pesanTugas" aria-live="polite"></p>
+      <ul id="daftarTugas"></ul>
+    </section>
+
+    <hr style="margin: 20px 0" />
+
+    <!-- Eksperimen Mandiri 3 & 4 -->
+    <section>
+      <h3>Fitur Tambahan Workshop</h3>
+
+      <!-- Dropdown Sesi (Eksperimen 3) -->
+      <label for="pilihanSesi">Pilih Sesi Workshop:</label><br />
+      <select id="pilihanSesi">
+        <option value="">-- Pilih Sesi --</option>
+        <option value="Sesi Pagi (09:00 - 12:00)">Sesi Pagi: Dasar Web</option>
+        <option value="Sesi Siang (13:00 - 15:00)">
+          Sesi Siang: JavaScript Lanjutan
+        </option>
+      </select>
+      <p>Sesi terpilih: <span id="infoSesi">-</span></p>
+
+      <br />
+
+      <!-- Tombol Toggle Paragraf (Eksperimen 4) -->
+      <button id="tombolToggleParagraf" type="button">
+        Sembunyikan Paragraf
+      </button>
+      <p id="paragrafTarget">
+        Paragraf ini dapat disembunyikan dan ditampilkan kembali menggunakan
+        tombol di atas.
+      </p>
+    </section>
+  </body>
+</html>
